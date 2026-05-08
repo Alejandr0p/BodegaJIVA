@@ -110,11 +110,6 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50/50 flex flex-col font-sans text-slate-900 relative">
       <Snow />
-      {/* Top Banner */}
-      <div className="bg-brand-primary text-white py-2 px-4 text-center text-[11px] font-black tracking-widest uppercase shadow-md relative z-50">
-        🚀 ENVÍO GRATUITO EN SMP Y LOS OLIVOS - PIDE YA 🚀
-      </div>
-
       {/* Modern Header */}
       <header className="sticky top-0 z-40 bg-brand-secondary/95 backdrop-blur-xl px-4 md:px-12 py-3 md:py-5 flex items-center justify-between shadow-2xl border-b border-white/10">
         <div className="flex items-center gap-3 md:gap-4">
@@ -169,6 +164,16 @@ function App() {
               <p className="text-base md:text-lg text-blue-100/80 max-w-xl font-medium leading-relaxed mx-auto lg:mx-0">
                 Todo lo que necesitas, helado y en tu puerta. La mejor selección de bebidas con delivery express.
               </p>
+              
+              <div className="space-y-1">
+                <p className="text-xs md:text-sm text-brand-primary font-black uppercase tracking-widest">
+                  ✨ Se hacen ventas mayoristas y minoristas ✨
+                </p>
+                <p className="text-[10px] md:text-xs text-blue-200 font-bold uppercase tracking-wider">
+                  🤝 Abastecemos negocios y fiestas 🤝
+                </p>
+              </div>
+
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
                 <a href="#catalogo" className="w-full sm:w-auto px-10 py-4 md:py-5 bg-brand-primary hover:bg-orange-600 text-white font-black rounded-2xl shadow-xl shadow-orange-500/40 transition-all hover:-translate-y-1 active:scale-95 text-center">
                   EXPLORAR CATÁLOGO

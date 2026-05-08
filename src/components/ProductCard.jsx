@@ -3,7 +3,7 @@ import { Plus, ShoppingCart } from 'lucide-react';
 
 const ProductCard = ({ producto, addToCart }) => {
   return (
-    <div className="group relative bg-white rounded-[1.5rem] md:rounded-[2.5rem] p-3 md:p-5 transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(0,86,179,0.2)] border border-slate-100 hover:border-brand-secondary/10">
+    <div className="group relative bg-white rounded-[1.5rem] md:rounded-[2.5rem] p-3 md:p-5 transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(0,86,179,0.2)] border border-slate-100 hover:border-brand-secondary/10 animate-slide-up">
       <div className="relative h-32 md:h-64 bg-slate-50 rounded-[1.2rem] md:rounded-[2.5rem] flex items-center justify-center overflow-hidden mb-3 md:mb-6 border border-slate-50 group-hover:bg-blue-50/50 transition-colors duration-500">
         {producto.foto ? (
           <img 
