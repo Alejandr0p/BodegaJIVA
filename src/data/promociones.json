@@ -1,0 +1,33 @@
+[
+  {
+    "id": "promo1",
+    "nombre": "Promoción para mamá",
+    "precio": 29.90,
+    "precioOld": 38.90,
+    "emoji": "🍷",
+    "cat": "promociones",
+    "foto": "promocion_mama.png",
+    "items": [
+      "2 Vinos Bendición 750ml",
+      "1 Copa de Vidrio",
+      "1 Sacacorchos",
+      "1 Barra de Chocolate Triángulo"
+    ]
+  },
+  {
+    "id": "promo2",
+    "nombre": "Promoción para mamá premium",
+    "precio": 35.90,
+    "precioOld": 44.90,
+    "emoji": "🎁",
+    "cat": "promociones",
+    "foto": "producto_11.png",
+    "items": [
+      "2 Vinos Bendición 750ml",
+      "1 Copa de Vidrio",
+      "1 Sacacorchos",
+      "1 Caja de Vizzio 72g",
+      "Bolsa de Regalo"
+    ]
+  }
+]

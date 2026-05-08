@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "nombre": "Piscano 275ml botella",
+    "precio": 5.00,
+    "precioOld": 6.50,
+    "emoji": "🍊",
+    "cat": "piscos",
+    "nota": "Consultar sabores disponibles",
+    "foto": "piscano_botella.png"
+  },
+  {
+    "id": 2,
+    "nombre": "Piscano 355ml lata",
+    "precio": 5.00,
+    "precioOld": 7.50,
+    "emoji": "🟡",
+    "cat": "piscos",
+    "nota": "Consultar sabores disponibles",
+    "foto": "piscano_lata.png"
+  },
+  {
+    "id": 3,
+    "nombre": "Mikes 355ml",
+    "precio": 5.50,
+    "precioOld": 6.50,
+    "emoji": "🍋",
+    "cat": "bebidas",
+    "nota": "Consultar sabores disponibles",
+    "foto": "mikes.png"
+  },
+  {
+    "id": 4,
+    "nombre": "Four Loko 473ml",
+    "precio": 10.90,
+    "precioOld": 13.50,
+    "emoji": "🟣",
+    "cat": "bebidas",
+    "nota": "Consultar sabores disponibles",
+    "foto": "four_loko.png"
+  },
+  {
+    "id": 5,
+    "nombre": "Agua San Carlos 500ml",
+    "precio": 1.00,
+    "precioOld": 1.50,
+    "emoji": "💧",
+    "cat": "aguas",
+    "foto": "san_carlos_500ml.png"
+  },
+  {
+    "id": 6,
+    "nombre": "Agua SPORT 8L",
+    "precio": 5.00,
+    "precioOld": 7.50,
+    "emoji": "🫙",
+    "cat": "aguas",
+    "foto": "agua_sport_8l.png"
+  },
+  {
+    "id": 7,
+    "nombre": "Gaseosa Evervess",
+    "precio": 5.50,
+    "precioOld": 7.00,
+    "emoji": "🟢",
+    "cat": "bebidas",
+    "foto": "evervess.png"
+  },
+  {
+    "id": 8,
+    "nombre": "Cerveza Tres Cruces 355ml",
+    "precio": 4.00,
+    "precioOld": 5.00,
+    "emoji": "🍺",
+    "cat": "cervezas",
+    "foto": "tres_cruces_lata.png"
+  },
+  {
+    "id": 9,
+    "nombre": "Whisky Jack Daniels 750ml",
+    "precio": 105.00,
+    "precioOld": 130.00,
+    "emoji": "🥃",
+    "cat": "licores",
+    "foto": "jack_daniels.png"
+  },
+  {
+    "id": 10,
+    "nombre": "Bebida D'Fiesta 2L",
+    "precio": 5.50,
+    "precioOld": 7.00,
+    "emoji": "🔵",
+    "cat": "bebidas",
+    "nota": "Consultar sabores disponibles",
+    "foto": "bebida_d´fiesta.png"
+  },
+  {
+    "id": 11,
+    "nombre": "Smirnoff Lata 350ml",
+    "precio": 6.90,
+    "precioOld": 8.50,
+    "emoji": "🧊",
+    "cat": "licores",
+    "foto": "smirnoff_lata.png"
+  }
+]
