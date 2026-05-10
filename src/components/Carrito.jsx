@@ -36,31 +36,41 @@ const Carrito = ({ cart, isOpen, setIsOpen, updateQuantity, removeItem, total, o
                 {cart.map(item => (
                   <div key={item.id} className="flex gap-3 md:gap-4 items-center">
                     <div className="w-20 h-20 md:w-24 md:h-24 bg-slate-50 rounded-xl md:rounded-2xl flex items-center justify-center text-3xl md:text-4xl border border-slate-100 p-2">
-                      {item.foto ? <img src={item.foto} className="w-full h-full object-contain rounded-xl md:rounded-2xl" /> : item.emoji}
+                      {item.foto ? (
+                        <img 
+                          src={Array.isArray(item.foto) ? (item.sabores ? item.foto[item.sabores.indexOf(item.sabor)] : item.foto[0]) : item.foto} 
+                          className="w-full h-full object-contain rounded-xl md:rounded-2xl" 
+                        />
+                      ) : item.emoji}
                     </div>
                     
                     <div className="flex-1">
                       <h4 className="font-bold text-slate-900 text-base md:text-lg leading-tight mb-0.5 md:mb-1">{item.nombre}</h4>
+                      {item.sabor && (
+                        <p className="text-[10px] md:text-xs text-brand-secondary font-black uppercase tracking-widest mb-1">
+                          Sabor: {item.sabor}
+                        </p>
+                      )}
                       <p className="text-brand-primary font-black text-sm md:text-base">S/ {item.precio.toFixed(2)}</p>
                       
                       <div className="flex items-center gap-3 md:gap-4 mt-2 md:mt-3">
                         <div className="flex items-center bg-slate-100 rounded-lg md:rounded-xl p-0.5 md:p-1">
                           <button 
-                            onClick={() => updateQuantity(item.id, -1)}
+                            onClick={() => updateQuantity(item.id, item.sabor, -1)}
                             className="p-1 md:p-1.5 hover:bg-white hover:shadow-sm rounded-md md:rounded-lg text-slate-500 transition-all"
                           >
                             <Minus size={12} md:size={14} strokeWidth={3} />
                           </button>
                           <span className="px-3 md:px-4 font-black text-xs md:text-sm text-slate-900">{item.quantity}</span>
                           <button 
-                            onClick={() => updateQuantity(item.id, 1)}
+                            onClick={() => updateQuantity(item.id, item.sabor, 1)}
                             className="p-1 md:p-1.5 hover:bg-white hover:shadow-sm rounded-md md:rounded-lg text-slate-500 transition-all"
                           >
                             <Plus size={12} md:size={14} strokeWidth={3} />
                           </button>
                         </div>
                         <button 
-                          onClick={() => removeItem(item.id)}
+                          onClick={() => removeItem(item.id, item.sabor)}
                           className="text-slate-300 hover:text-red-500 transition-colors"
                         >
                           <Trash2 size={18} md:size={20} />

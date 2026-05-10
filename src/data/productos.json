@@ -173,7 +173,8 @@
     "precioOld": 15.00,
     "emoji": "🧪",
     "cat": "piscos",
-    "nota": "Sabores : Goma, Granadina",
+    "nota": "Selecciona tu sabor favorito",
+    "sabores": ["Goma", "Granadina"],
     "foto": [
       "jarabe_goma.png",
       "jarabe_granadina.png"

@@ -73,22 +73,23 @@ function App() {
     setTotal(newTotal);
   }, [cart]);
 
-  const addToCart = (producto) => {
+  const addToCart = (producto, saborSeleccionado) => {
     setCart(prev => {
-      const existing = prev.find(item => item.id === producto.id);
+      const existing = prev.find(item => item.id === producto.id && item.sabor === saborSeleccionado);
       if (existing) {
         return prev.map(item =>
-          item.id === producto.id ? { ...item, quantity: item.quantity + 1 } : item
+          (item.id === producto.id && item.sabor === saborSeleccionado) 
+            ? { ...item, quantity: item.quantity + 1 } 
+            : item
         );
       }
-      return [...prev, { ...producto, quantity: 1 }];
+      return [...prev, { ...producto, quantity: 1, sabor: saborSeleccionado }];
     });
-    // Visual feedback could be added here
   };
 
-  const updateQuantity = (id, delta) => {
+  const updateQuantity = (id, sabor, delta) => {
     setCart(prev => prev.map(item => {
-      if (item.id === id) {
+      if (item.id === id && item.sabor === sabor) {
         const newQty = Math.max(1, item.quantity + delta);
         return { ...item, quantity: newQty };
       }
@@ -96,8 +97,8 @@ function App() {
     }));
   };
 
-  const removeItem = (id) => {
-    setCart(prev => prev.filter(item => item.id !== id));
+  const removeItem = (id, sabor) => {
+    setCart(prev => prev.filter(item => !(item.id === id && item.sabor === sabor)));
   };
 
   const handleCheckout = () => {

@@ -3,6 +3,7 @@ import { Plus, ShoppingCart } from 'lucide-react';
 
 const ProductCard = ({ producto, addToCart }) => {
   const [currentFotoIdx, setCurrentFotoIdx] = useState(0);
+  const [selectedSabor, setSelectedSabor] = useState(producto.sabores ? producto.sabores[0] : null);
   const isMultiFoto = Array.isArray(producto.foto);
 
   useEffect(() => {
@@ -39,7 +40,28 @@ const ProductCard = ({ producto, addToCart }) => {
         <p className="text-[8px] md:text-[10px] text-brand-secondary font-black uppercase tracking-[0.2em] opacity-60">{producto.cat}</p>
         <h3 className="font-bold text-slate-900 text-sm md:text-xl leading-tight group-hover:text-brand-secondary transition-colors line-clamp-2">{producto.nombre}</h3>
         
-        {producto.nota && (
+        {producto.sabores && (
+          <div className="flex flex-wrap gap-1.5 pt-1">
+            {producto.sabores.map((sabor, idx) => (
+              <button
+                key={sabor}
+                onClick={() => {
+                  setSelectedSabor(sabor);
+                  if (isMultiFoto) setCurrentFotoIdx(idx);
+                }}
+                className={`px-3 py-1 rounded-full text-[9px] md:text-[11px] font-black uppercase tracking-widest transition-all ${
+                  selectedSabor === sabor 
+                    ? 'bg-brand-secondary text-white shadow-md' 
+                    : 'bg-slate-100 text-slate-500 hover:bg-slate-200'
+                }`}
+              >
+                {sabor}
+              </button>
+            ))}
+          </div>
+        )}
+
+        {producto.nota && !producto.sabores && (
           <p className="text-[8px] md:text-[10px] bg-slate-100 text-slate-500 py-0.5 md:py-1 px-2 md:px-3 rounded md:rounded-lg font-bold italic inline-block">
             {producto.nota}
           </p>
@@ -62,7 +84,7 @@ const ProductCard = ({ producto, addToCart }) => {
           </div>
           
           <button 
-            onClick={() => addToCart(producto)}
+            onClick={() => addToCart(producto, selectedSabor)}
             className="bg-brand-secondary hover:bg-brand-primary text-white p-2 md:p-4 rounded-xl md:rounded-2xl transition-all duration-300 shadow-xl shadow-blue-500/20 active:scale-90"
           >
             <Plus size={16} md:size={22} strokeWidth={3} />

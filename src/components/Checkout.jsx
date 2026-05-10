@@ -17,7 +17,7 @@ const Checkout = ({ cart, total, isOpen, setIsOpen }) => {
   };
 
   const generateWhatsAppMessage = () => {
-    const productsList = cart.map(item => `- *${item.quantity}x* ${item.nombre} (S/ ${(item.precio * item.quantity).toFixed(2)})`).join('\n');
+    const productsList = cart.map(item => `- *${item.quantity}x* ${item.nombre}${item.sabor ? ` (${item.sabor})` : ''} (S/ ${(item.precio * item.quantity).toFixed(2)})`).join('\n');
 
     const deliveryInfo = formData.tipoEntrega === 'delivery'
       ? `DIRECCION: ${formData.direccion}`
