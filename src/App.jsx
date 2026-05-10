@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ShoppingCart, Phone, MapPin, CheckCircle, Plus, MessageCircle } from 'lucide-react';
+import { ShoppingCart, Phone, MapPin, CheckCircle, Plus, MessageCircle, CreditCard, Banknote } from 'lucide-react';
 import Catalogo from './components/Catalogo';
 import Carrito from './components/Carrito';
 import Checkout from './components/Checkout';
@@ -235,6 +235,28 @@ function App() {
             <p className="text-slate-400 font-medium leading-relaxed max-w-xs text-sm md:text-base">
               La bodega más completa de San Martín de Porres. Calidad, confianza y rapidez en cada entrega.
             </p>
+            
+            <div className="space-y-4 pt-4">
+              <h5 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-500">Aceptamos</h5>
+              <div className="flex flex-wrap gap-3">
+                <div className="flex items-center gap-2.5 px-3 py-2 bg-white/5 rounded-xl border border-white/10 hover:border-brand-primary/30 transition-all group">
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#742284] shadow-[0_0_10px_rgba(116,34,132,0.5)] group-hover:scale-125 transition-transform"></div>
+                  <span className="text-[10px] font-black tracking-widest text-slate-300 group-hover:text-white transition-colors">YAPE</span>
+                </div>
+                <div className="flex items-center gap-2.5 px-3 py-2 bg-white/5 rounded-xl border border-white/10 hover:border-brand-accent/30 transition-all group">
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#00D2D2] shadow-[0_0_10px_rgba(0,210,210,0.5)] group-hover:scale-125 transition-transform"></div>
+                  <span className="text-[10px] font-black tracking-widest text-slate-300 group-hover:text-white transition-colors">PLIN</span>
+                </div>
+                <div className="flex items-center gap-2.5 px-3 py-2 bg-white/5 rounded-xl border border-white/10 hover:border-emerald-500/30 transition-all group">
+                  <Banknote size={14} className="text-slate-400 group-hover:text-emerald-400 transition-all group-hover:scale-110" />
+                  <span className="text-[10px] font-black tracking-widest text-slate-300 group-hover:text-white transition-colors">EFECTIVO</span>
+                </div>
+                <div className="flex items-center gap-2.5 px-3 py-2 bg-white/5 rounded-xl border border-white/10 hover:border-white/30 transition-all group">
+                  <CreditCard size={14} className="text-slate-400 group-hover:text-white transition-all group-hover:scale-110" />
+                  <span className="text-[10px] font-black tracking-widest text-slate-300 group-hover:text-white transition-colors">TARJETAS</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="space-y-6 md:space-y-8">

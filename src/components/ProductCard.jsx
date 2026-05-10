@@ -1,15 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Plus, ShoppingCart } from 'lucide-react';
 
 const ProductCard = ({ producto, addToCart }) => {
+  const [currentFotoIdx, setCurrentFotoIdx] = useState(0);
+  const isMultiFoto = Array.isArray(producto.foto);
+
+  useEffect(() => {
+    if (!isMultiFoto || producto.foto.length <= 1) return;
+
+    const timer = setInterval(() => {
+      setCurrentFotoIdx((prev) => (prev + 1) % producto.foto.length);
+    }, 3000); // Cambia cada 3 segundos
+
+    return () => clearInterval(timer);
+  }, [isMultiFoto, producto.foto]);
+
+  const fotoActual = isMultiFoto ? producto.foto[currentFotoIdx] : producto.foto;
+
   return (
     <div className="group relative bg-white rounded-[1.5rem] md:rounded-[2.5rem] p-3 md:p-5 transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(0,86,179,0.2)] border border-slate-100 hover:border-brand-secondary/10 animate-slide-up">
       <div className="relative h-32 md:h-64 bg-slate-50 rounded-[1.2rem] md:rounded-[2.5rem] flex items-center justify-center overflow-hidden mb-3 md:mb-6 border border-slate-50 group-hover:bg-blue-50/50 transition-colors duration-500">
-        {producto.foto ? (
+        {fotoActual ? (
           <img 
-            src={producto.foto} 
+            key={currentFotoIdx}
+            src={fotoActual} 
             alt={producto.nombre} 
-            className="w-full h-full object-contain p-2 md:p-4 transition-transform duration-700 group-hover:scale-110"
+            className="w-full h-full object-contain p-2 md:p-4 transition-all duration-700 group-hover:scale-110 animate-in fade-in zoom-in-95"
           />
         ) : (
           <span className="text-4xl md:text-7xl drop-shadow-2xl transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-12">{producto.emoji}</span>

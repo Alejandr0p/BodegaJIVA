@@ -60,6 +60,10 @@
   --accent: var(--color-brand-accent);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--color-surface-bg);
   color: #0f172a;

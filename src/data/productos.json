@@ -102,5 +102,135 @@
     "emoji": "🧊",
     "cat": "licores",
     "foto": "smirnoff_lata.png"
+  },
+  {
+    "id": 12,
+    "nombre": "Jägermeister 700ml",
+    "precio": 64.90,
+    "precioOld": 79.90,
+    "emoji": "🦌",
+    "cat": "licores",
+    "foto": "jagermeister_700ml.png"
+  },
+  {
+    "id": 13,
+    "nombre": "Johnnie Walker Red Label 750ml",
+    "precio": 54.90,
+    "precioOld": 59.90,
+    "emoji": "🥃",
+    "cat": "licores",
+    "foto": "jw_red_750ml.png"
+  },
+  {
+    "id": 14,
+    "nombre": "Ron Flor de Caña 5 Años 750ml",
+    "precio": 57.90,
+    "precioOld": 65.00,
+    "emoji": "🥃",
+    "cat": "licores",
+    "foto": "flordecana_5_750ml.png"
+  },
+  {
+    "id": 15,
+    "nombre": "Ron Flor de Caña 4 Años 750ml",
+    "precio": 41.90,
+    "precioOld": 48.00,
+    "emoji": "🥃",
+    "cat": "licores",
+    "foto": "flordecana_4_750ml.png"
+  },
+  {
+    "id": 16,
+    "nombre": "Smirnoff Green Apple 700ml",
+    "precio": 44.90,
+    "precioOld": 55.00,
+    "emoji": "🍏",
+    "cat": "licores",
+    "foto": "smirnoff_apple_700ml.png"
+  },
+  {
+    "id": 17,
+    "nombre": "Pisco Rey de Ica 750ml",
+    "precio": 21.90,
+    "precioOld": 28.00,
+    "emoji": "🍸",
+    "cat": "piscos",
+    "foto": "pisco_rey_de_ica.png"
+  },
+  {
+    "id": 18,
+    "nombre": "Anisado Cartujo 750ml",
+    "precio": 13.90,
+    "precioOld": 18.00,
+    "emoji": "🍾",
+    "cat": "piscos",
+    "foto": "anisado_cartujo.png"
+  },
+  {
+    "id": 19,
+    "nombre": "Jarabe Kamil 750ml",
+    "precio": 10.90,
+    "precioOld": 15.00,
+    "emoji": "🧪",
+    "cat": "piscos",
+    "nota": "Sabores : Goma, Granadina",
+    "foto": [
+      "jarabe_goma.png",
+      "jarabe_granadina.png"
+    ]
+  },
+  {
+    "id": 20,
+    "nombre": "Smirnoff Ice Apple 335ml",
+    "precio": 8.40,
+    "precioOld": 9.50,
+    "emoji": "🧊",
+    "cat": "licores",
+    "foto": "smirnoff_ice_apple.png"
+  },
+  {
+    "id": 21,
+    "nombre": "Cerveza Cusqueña Negra 473ml (Lata)",
+    "precio": 6.40,
+    "precioOld": 7.50,
+    "emoji": "🍺",
+    "cat": "cervezas",
+    "foto": "cusquena_negra_lata.png"
+  },
+  {
+    "id": 22,
+    "nombre": "Cerveza Heineken 330ml (Botella)",
+    "precio": 5.40,
+    "precioOld": 6.50,
+    "emoji": "🍺",
+    "cat": "cervezas",
+    "foto": "heineken_botella.png"
+  },
+  {
+    "id": 23,
+    "nombre": "Ginger Evervess 1.5L",
+    "precio": 6.40,
+    "precioOld": 7.50,
+    "emoji": "🥤",
+    "cat": "bebidas",
+    "foto": "ginger_evervess_1.5l.png"
+  },
+  {
+    "id": 24,
+    "nombre": "Agua Cielo 1 Litro",
+    "precio": 2.50,
+    "precioOld": 3.50,
+    "emoji": "💧",
+    "cat": "aguas",
+    "foto": "agua_cielo_1l.png"
+  },
+  {
+    "id": 25,
+    "nombre": "Agua Cielo 625ml",
+    "precio": 1.50,
+    "precioOld": 2.00,
+    "emoji": "💧",
+    "cat": "aguas",
+    "foto": "agua_cielo_625ml.png"
   }
 ]
